@@ -33,6 +33,10 @@ class StaffController {
     fun delete(id: Int) {
         println("Delete_by_Id: $id")
     }
+    @Get
+    fun getAll(): MutableMap<Int, Staff> {
+        return staffServices.getAll()
+    }
 
     @Get("/{id}")
     fun getById(id: Int): Staff {
@@ -40,8 +44,4 @@ class StaffController {
         return staffServices.getById(id)
     }
 
-    @Get
-    fun getAll(): MutableMap<Int, Staff> {
-        return staffServices.getAll()
-    }
 }

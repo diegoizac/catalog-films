@@ -1,0 +1,169 @@
+_type: export
+__export_format: 4
+__export_date: 2023-03-27T17:42:53.448Z
+__export_source: insomnia.desktop.app:v2023.1.0
+resources:
+  - _id: req_f884cd333caa4caebe07041f117b7bcf
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679727689854
+    created: 1679727608636
+    url: localhost:8080/staff/
+    name: Put
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "id": 25,
+            "firstName": "Joao",
+            "lastName": "Pedro",
+            "addressId": 7,
+            "storeId": 7,
+            "lastUpdate": "2021-01-01T09:00:00"
+         }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1679727608636
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_af9aa6e114284004afea909956c6784b
+    parentId: null
+    modified: 1679727499297
+    created: 1679613028083
+    name: catalog-films
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_bdc58efe72774d67b2bda814795412da
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679727592677
+    created: 1679727562973
+    url: localhost:8080/staff/25
+    name: Delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1679727562973
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9e447cc450834b5c81a7516b72f634f4
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679726931183
+    created: 1679723983293
+    url: localhost:8080/staff/2
+    name: Get By Id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1679723983293
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eea41036196a42ffbdf120e8f620ede3
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679726915972
+    created: 1679613043040
+    url: localhost:8080/staff/
+    name: Post
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "id": 2,
+            "firstName": "Stephanie",
+            "lastName": "Gabrielle",
+            "addressId": 7,
+            "storeId": 7,
+            "lastUpdate": "2021-01-01T09:00:00"
+         }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_9bbfa796d7124dd584828411a4bb1a1b
+    authentication: {}
+    metaSortKey: -1679613043040
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eebcea9c5e4643c680c4471f61ca7998
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679724352334
+    created: 1679613032698
+    url: localhost:8080/staff
+    name: Get All
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1679613032698
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_df355e5cb58208ef5d489a027fb49f5b89bc2002
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679613028090
+    created: 1679613028090
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1679613028090
+    _type: environment
+  - _id: jar_df355e5cb58208ef5d489a027fb49f5b89bc2002
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679613028092
+    created: 1679613028092
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_9a76c94e7ffa40c996b6d960e3628188
+    parentId: wrk_af9aa6e114284004afea909956c6784b
+    modified: 1679613028084
+    created: 1679613028084
+    fileName: catalogo-filmes
+    contents: ""
+    contentType: yaml
+    _type: api_spec
