@@ -9,7 +9,7 @@ import io.micronaut.http.MutableHttpResponse as HttpMutableHttpResponse
 class StaffController {
 
     private val staffServices = StaffServices()
-    //Pq me obrigou a colocar o private ?
+    //Pq me obrigou a colocar o private ? variável interna do controller
 
     @Post
     fun create(staff: Staff): HttpMutableHttpResponse<Unit>? {
@@ -25,13 +25,17 @@ class StaffController {
     }
 
     @Put
-    fun update(staff: Staff) {
-        println(staff)
+    fun update(staff: Staff): HttpMutableHttpResponse<Unit>? {
+        return staffServices.save(staff)
     }
 
     @Delete("/{id}")
     fun delete(id: Int) {
-        println("Delete_by_Id: $id")
+        return staffServices.remove(id)
+    }
+    @Get
+    fun getAll(): MutableMap<Int, Staff> {
+        return staffServices.getAll()
     }
 
     @Get("/{id}")
@@ -40,8 +44,4 @@ class StaffController {
         return staffServices.getById(id)
     }
 
-    @Get
-    fun getAll(): MutableMap<Int, Staff> {
-        return staffServices.getAll()
-    }
 }
